@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>taskAura</h1>
+    </header>
+    <div id="content">
+      <div id="side-bar">
+        <div class="container">
+          <h3>TASKS</h3>
+          <button id="upcoming">Upcoming</button>
+          <button id="today">Today</button>
+        </div>
+        <div class="container">
+          <h3>LISTS</h3>
+          <button id="personal">Personal</button>
+          <button id="work">Work</button>
+          <button id="add-new-list">New list</button>
+        </div>
+      </div>
+      <div id="main-content"></div>
+      <dialog>
+        <form id="to-do-form">
+          <h3>New task</h3>
+          <input type="text" id="task-title" name="task-title" placeholder="Task title" required />
+          <textarea
+            rows="3"
+            cols="50"
+            name="description"
+            id="description"
+            placeholder="Description"
+            form="to-do-form"
+          ></textarea>
+          <select name="list" id="list" required>
+            <option value="" disabled selected>Select a list</option>
+            <option value="personal">Personal</option>
+            <option value="work">Work</option>
+          </select>
+          <input
+            type="text"
+            id="due-date"
+            name="due-date"
+            placeholder="Due date"
+            onfocus="(this.type='date')"
+            onblur="this.type='text'"
+          />
+          <button type="submit" id="add-task">Add task</button>
+        </form>
+      </dialog>
+      <button id="new-to-do"></button>
+    </div>
+    <footer><p>&copy 2024 mvttn. All rights reserved.</p></footer>
+  </body>
+</html>
